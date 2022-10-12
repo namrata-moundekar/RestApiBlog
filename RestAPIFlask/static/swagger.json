@@ -1,15 +1,272 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "description": "sean",
+    "description": "Swagger",
     "version": "1.0.0",
-    "title": "Seans-Python3-Flask-Rest-Boilerplate",
+    "title": "Swagger Api Endpoints",
     "contact": {
-      "email": "seanwasere@gmail.com"
+      "email": ""
     },
     "license": {
-      "name": "MIT",
-      "url": "https://opensource.org/licenses/MIT"
+      "name": "",
+      "url": ""
+    }
+  },
+
+ "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Blog Request",
+      "description": "Example API for requesting and return blog requests"
+    }
+  ],
+  "paths": {
+    "/get_blog/": {
+      "get": {
+        "tags": [
+          "Blog Request"
+        ],
+        "summary": "Returns blogRequests",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/blogRequests"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Blog Request"
+        ],
+        "summary": "Create a new blog request system",
+        "requestBody": {
+          "description": "Blog Request Post Object",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/blogRequestPostBody"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/blog/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of the blog that we want to match",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Blog Request"
+        ],
+        "summary": "Get blog request with given ID",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Blog Request id",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/blogRequests"
+            }
+          },
+          "400": {
+            "description": "Failed. Misunderstood Request."
+          },
+          "404": {
+            "description": "Failed. Blog request not found."
+          }
+        }
+      },
+      "put": {
+        "summary": "edit a blog request by ID",
+        "tags": [
+          "Blog Request"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Blog Request id",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Blog Request Object",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/blogRequest"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/blogRequest"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete Blog Request by ID",
+        "tags": [
+          "Blog Request"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Blog Request Id",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Misunderstood Request."
+          },
+          "404": {
+            "description": "Failed. Blog Request not found."
+          }
+        },
+        
+        
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "id": {
+        "properties": {
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "blogRequestPostBody": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "format": "number"
+          },
+          "title": {
+            "type": "string",
+            "format": "string"
+          },
+          "content": {
+            "type": "string",
+            "format": "string"
+          },
+          "created_at": {
+            "type": "date",
+            "format": "number"
+          },
+           "modified_at": {
+             "type": "date",
+             "format": "number"
+          },
+          "userid": {
+            "type": "number",
+            "format": "number"
+          },
+          
+        }
+      },
+      "blogRequest": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "format": "string"
+          },
+          "content": {
+            "type": "string",
+            "format": "string"
+          },
+          "created_at": {
+            "type": "date",
+            "format": "number"
+          },
+           "modified_at": {
+             "type": "date",
+             "format": "number"
+          },
+          "userid": {
+            "type": "number",
+            "format": "number"
+          },
+           
+        }
+      },
+      "blogRequests": {
+        "type": "object",
+        "properties": {
+          "bookRequest": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/blogRequest"
+            }
+          }
+        }
+      }
     }
   }
-  }
+}
+      

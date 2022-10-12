@@ -1,3 +1,6 @@
+from flask import Flask, jsonify, render_template, send_from_directory
+from marshmallow import Schema, fields
+from werkzeug.utils import secure_filename
 from datetime import datetime
 from flask import request,render_template
 import json
@@ -7,107 +10,72 @@ from flask_jwt_extended import jwt_required
 from flask_jwt_extended import get_jwt_identity
 from werkzeug.security import check_password_hash
 from flask import jsonify
-from flask_swagger import swagger
-from flask_swagger_ui import get_swaggerui_blueprint
-# from passlib.hash import pbkdf2_sha256
+from flask_marshmallow import Marshmallow, fields
 from  werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow, fields
+from flask_restful import Api
 import os
 import logging
 from marshmallow import Schema, fields
+from flask_restful import Resource
+from flask import Blueprint, Response, request
+from pathlib import Path
+from urllib.parse import urljoin
+from flask import current_app
+from flask import make_response
+from flask_swagger import swagger
+from flask_swagger_ui import get_swaggerui_blueprint 
+from RestAPIFlask_old.models import *
+from .migrate_cmd import db, migrate
+from .models.user import User
+from .models.comment import Comment
+from .models.blog import Blog
 
-# logging.basicConfig(filename='record.log', level=logging.DEBUG)
+
 logging.basicConfig(filename='record.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(name)s : %(message)s')
 
 #######################    APP CONFIG HERE  ########################################
-"""app config here"""
+"""      app config here    """
 
-app = Flask(__name__)
+
+app = Flask(__name__, template_folder='./swagger/templates')
 app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://root:root@localhost/flaskwebapp'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 ma = Marshmallow(app)
+api = Api(app)
+
+db.init_app(app)
+migrate.init_app(app, db)
+
+
 
 app.config["JWT_SECRET_KEY"] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NDg3NTI3NiwianRpIjoiNjBlNTZkMWMtZGM3Yi00MjgxLWE1YzctMTQyMDRhYzdhNzUzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InJpdGEiLCJuYmYiOjE2NjQ4NzUyNzYsImV4cCI6MTY2NDg3NjE3Nn0.yRgDPdQJrV4Smps8XwbFOmr07qIGR-RpyLs6EuVy-0U"
 jwt = JWTManager(app)
 
 
 
-#######################    MODELS HERE  ########################################
-
-class Blog(db.Model):
-  id = db.Column(db.Integer, primary_key=True)
-  title = db.Column(db.String(130), nullable=False)
-  content = db.Column(db.Text, nullable=False)
-  created_at = db.Column(db.DateTime,default=datetime.utcnow)
-  modified_at = db.Column(db.DateTime,default=datetime.utcnow)
-  userid = db.Column('userid',db.ForeignKey('user.id'),unique=False)
-  
-
-class Comment(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    comment = db.Column(db.Text, nullable=False)
-    blogid = db.Column('blogid',db.ForeignKey('blog.id'),unique=False)
-    
-    def __init__(self, comment, blogid):
-          self.comment = comment
-          self.blogid = blogid
- 
-        
- 
-class User(db.Model):
-  id = db.Column(db.Integer, primary_key=True)
-  name = db.Column(db.String(130), nullable=False)
-  password = db.Column(db.String(130), nullable=True)
-  blog = db.relationship(
-        'Blog',
-        backref='user',
-        cascade='all, delete, delete-orphan',
-        single_parent=True
-        
-    )
-  
-  def __init__(self, name, password):
-        self.name = name
-        self.password = password
-        
-        
-db.create_all()         
-
 #######################    MODELS SCHEMA USING MARSHMALLOW HERE  ########################################
+
+
+
 class UserSchema(ma.Schema):
     class Meta:
         fields = ("name", "password")
         
-        
-
 class BlogSchema(ma.Schema):
     class Meta:
-        model = Blog
-        load_instance = True
-        include_relationships = True
+        fields = ("id","title", "content", "created_at","modified_at","userid")
 
-        fields = ("title", "content", "created_at","modified_at","userid")
-
-    user = ma.Nested(UserSchema, many=True)
-    
-    
-    # class Meta:
-    #     fields = ("title", "content", "created_at","modified_at","userid")
         
-        # userid = fields.Int()
-        # user = fields.Nested('UserSchema', default=[], many=True)
- 
-
-
 class CommentSchema(ma.Schema):
     class Meta:
         model = Comment
         load_instance = True
         include_relationships = True
-        fields = ("comment","blogid")
+        fields = ("id","comment","blogid")
     blog = ma.Nested(BlogSchema, many=True)
 
  
@@ -120,9 +88,19 @@ users_schema = UserSchema(many=True)
 comment_schema = CommentSchema()
 comments_schema = CommentSchema(many=True)
 
- 
 
-################################   swagger specific  ####################################################
+
+    
+
+
+
+################################   Bluprint specific  ####################################################
+
+user_blueprint = Blueprint('user_blueprint', __name__)
+blog_blueprint = Blueprint('blog_blueprint', __name__)
+comment_blueprint = Blueprint('comment_blueprint', __name__)
+
+###############################   swagger specific  ####################################################
 
 
 SWAGGER_URL = '/swagger/'
@@ -136,11 +114,15 @@ SWAGGERUI_BLUEPRINT = get_swaggerui_blueprint(
 )
 app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
 
-############################      End swagger specific     #################################################
+###########################      End swagger specific     #################################################
+
+
+
 
 ##########################      USER REGISTER AND LOGIN CODE HERE     #####################################
 
-@app.route('/user_register/', methods = ['POST'])
+
+@user_blueprint.route('/user_register/', methods = ['POST'])
 def register():
     """ REGISTER USER WITH USERNAME AND PASSWORD"""
     
@@ -155,14 +137,15 @@ def register():
             db.session.commit()
             app.logger.debug("User added successfully")
             return json.dumps({"SUCCESS" : f"Record ({usr.id}) Added Successfully...! 200"})
-
+            # return Response(all_user, mimetype="application/json", status=200)
         
     else:
+        app.logger.debug("User required all fields.")
         return json.dumps({"ERROR" : "EMPTY BODY, ALL FIELDS REQUIRED"})
 
 
 
-@app.route('/userlogin/', methods = ['POST'])
+@user_blueprint.route('/userlogin/', methods = ['POST'])
 def login():
     """ LOGIN WITH USER NAME AND PASSWORD AND IT RETURNS BEARER ACCESS TOKEN"""
     
@@ -182,29 +165,36 @@ def login():
     else:
          return json.dumps({"ERROR" : "EMPTY BODY, ALL FIELDS REQUIRED"})
  
-        
- 
-@app.route('/get_user/', methods = ['GET'])
+         
+
+
+
+
+@user_blueprint.route('/get_user/', methods = ['GET'])
 def get_user():
-    """ GET  ALL USER """
+    """Get List of User
+   
+    """
     
     all_user = User.query.all()
-    if all_user:
-        user_lst = []
-        for usr in all_user:
-            json_dict = {"user_ID": usr.id,
-                          "user_name": usr.name,
-                          "user_password": usr.password,
-                        }
-            user_lst.append(json_dict)
-        app.logger.debug("Get all user")
-        return users_schema.dump(all_user)
+    app.logger.debug("Get all user")
+    return users_schema.dump(all_user)
+    # return Response(all_user, mimetype="application/json", status=200)
 
  
+
+
+
+
+
+
+
+
+
+
 ##########################    BLOG START HERE     #############################################
 
-
-@app.route('/post_blog', methods = ['POST'])
+@blog_blueprint.route('/get_blog/', methods = ['POST'])
 @jwt_required()
 def add_blog():
     """ ADD BLOG POST WITH BEARER TOKEN"""
@@ -230,8 +220,7 @@ def add_blog():
 
 
 
-
-@app.route('/blog/<int:id>',methods=['GET'])
+@blog_blueprint.route('/blog/<int:id>',methods=['GET'])
 def get_blog(id):
     """ GET BLOG POST USING ID"""
     
@@ -253,30 +242,22 @@ def get_blog(id):
 
 
 
-@app.route('/get', methods = ['GET'])
+@blog_blueprint.route('/get_blog/', methods = ['GET'])
 def get_post():
-    """ GET ALL BLOG POST THROUGH DATABASE"""
+    """Get List of blog
+   
+    """
+    
     
     all_blog = Blog.query.all()
-    # if all_blog:
-    #     blog_list = []
-    #     for blog in all_blog:
-    #         json_dict = {"BLOG_ID": blog.id,
-    #                       "BLOG_TITLE": blog.title,
-    #                       "BLOG_CONTENT": blog.content,
-    #                       "BLOD_C_DATE": blog.created_at,
-    #                       "BLOG_M_DATE": blog.modified_at,
-    #                       "BLOG_user_id": blog.userid,
-                         
-    #                       }
-    #         blog_list.append(json_dict)
+   
     app.logger.debug("Get all Blog post")
     return blogs_schema.dump(all_blog)
     
     
     
 
-@app.route('/blog/<int:id>',methods=['PUT'])
+@blog_blueprint.route('/blog/<int:id>',methods=['PUT'])
 def update_blog(id):
     """ UPDATE BLOG POST"""
     
@@ -297,10 +278,9 @@ def update_blog(id):
     return json.dumps({"ERROR": "Blog with given id not present so cannot update.."})
 
 
-
-@app.route('/blog/search/', methods=['POST'])
+@blog_blueprint.route('/blog/search', methods = ['POST'])
 @jwt_required()
-def search():
+def search_blog():
     current_user = get_jwt_identity()
     access_token = create_access_token(identity=current_user)
     data = request.get_json()
@@ -309,17 +289,20 @@ def search():
     if data.get('title'):
             search_title = data.get('title')
             blog = Blog.query.filter_by(title=search_title).all()
+    
+    if data.get('content'):
+            search_content = data.get('content')
+            blog = Blog.query.filter_by(content=search_content).all()
+     
      
   
     if not blog:
         return json.dumps({"ERROR": "blog not present"})
 
     return blogs_schema.dump(blog)
-    # return json.dumps(blog,indent=4, sort_keys=True, default=str)
-
-
-
-@app.route('/blog/<int:id>/',methods=['DELETE'])
+    
+ 
+@blog_blueprint.route('/blog/<int:id>',methods=['DELETE'])
 def delete_blog(id):
     """ DELETE BLOG POST """
     
@@ -336,10 +319,14 @@ def delete_blog(id):
 ##########################################  COMMENT START HERE  ########################################################
 
 
-@app.route('/post_comment/', methods = ['POST'])
+
+@comment_blueprint.route('/post_comment', methods = ['POST'])
 @jwt_required()
 def add_comment():
-    """ ADD comment POST WITH BEARER TOKEN"""
+    """Post List of comment 
+   
+                
+    """
     
     current_user = get_jwt_identity()
     access_token = create_access_token(identity = current_user)
@@ -355,6 +342,7 @@ def add_comment():
             db.session.commit()
             app.logger.debug("Comment added successfully")
             return json.dumps({"SUCCESS" : f"Record ({cmnt.id}) Added Successfully...!  200"})
+            # return CommentListResponseSchema().dump({'comment_list': cmnt})
 
         return json.dumps({"ERROR": "Required fields not present"})
     else:
@@ -363,10 +351,12 @@ def add_comment():
 
 
 
-@app.route('/comment/<int:id>',methods=['GET'])
+@comment_blueprint.route('/comment/<int:id>',methods=['GET'])
 def get_comment(id):
-    """ GET comment POST THROUGH DATABASE"""
-    
+    """Comment detail view.
+   
+    """
+   
     comment = Comment.query.filter_by(id=id).first()
     if comment:
         json_dict = {"comment_ID": comment.id,
@@ -376,34 +366,31 @@ def get_comment(id):
         # return json.dumps(json_dict,indent=4, sort_keys=True, default=str)
         app.logger.debug("Get comment with particular id.")
         return comment_schema.dump(comment)
+        # return CommentListResponseSchema().dump({'comment_list': json_dict})
     else:
         return json.dumps({"ERROR": f"No comment with Given Id {id}"})
 
 
 
 
-@app.route('/getcomment', methods = ['GET'])
-def get_comment_ALL():
-    """ GET ALL comment POST """
     
+
+@comment_blueprint.route('/get_comment/',methods=['GET'])
+def get_comment_ALL():
+    """Get List of comment
+  
+    """
     all_comment = Comment.query.all()
-    if all_comment:
-        comment_list = []
-        for comment in all_comment:
-            json_dict = {"comment_ID": comment.id,
-                          "comment_TITLE": comment.comment,
-                          "comment_BLOGID": comment.blogid,
-                         }
-            comment_list.append(json_dict)
-        # return json.dumps(comment_list,indent=4, sort_keys=True, default=str)
-        app.logger.debug("Get all comments ")
-        return comments_schema.dump(all_comment)
-    return json.dumps({"ERROR": f"No comments"})
+    
+    app.logger.debug("Get all comments ")
+    return comments_schema.dump(all_comment) 
+    # return CommentListResponseSchema().dump({'comment_list': all_comment})
 
 
 
 
-@app.route('/comment/<int:id>',methods=['PUT'])
+
+@comment_blueprint.route('/comment/<int:id>',methods=['PUT'])
 def update_comment(id):
     """ UPDATE comment POST """
     
@@ -422,8 +409,25 @@ def update_comment(id):
     return json.dumps({"ERROR": "comment with given id not present so cannot update.."})
 
 
+@comment_blueprint.route('/comment/search/', methods=['POST'])
+@jwt_required()
+def search_comment():
+    current_user = get_jwt_identity()
+    access_token = create_access_token(identity=current_user)
+    data = request.get_json()
 
-@app.route('/comment/<int:id>',methods=['DELETE'])
+    if data.get('comment'):
+            search_comment = data.get('comment')
+            comment = Comment.query.filter_by(comment=search_comment).all()
+     
+    if not comment:
+        return json.dumps({"ERROR": "Comment not present"})
+
+    return comments_schema.dump(comment)
+
+
+
+@comment_blueprint.route('/comment/<int:id>',methods=['DELETE'])
 def delete_comment(id):
     """ DELETE comment POST """
     
@@ -436,22 +440,46 @@ def delete_comment(id):
     return json.dumps({"ERROR": "comment with given id not present so cannot Delete.."})
 
 
+################################    End of Comment API Endpoints      #########################
 
+# method_view = CommentApi.as_view('comments')
+# app.add_url_rule("/comments/{cid}", view_func=method_view)
 
-
-# @app.route('/commentsearch',methods=['GET'])
-# def search_comment():
-#     comment = Comment.query.filter(Comment.title.like('%'+search_term+'%')).first()
-#     if comment:
-#         json_dict = {"comment_ID": comment.id,
-#                       "comment_TITLE": comment.comment,
-#                       "comment_BLOGID": comment.blogid,
-#                       }
-#         return json.dumps(json_dict,indent=4, sort_keys=True, default=str)
+# with app.test_request_context():
+#     jwt_scheme = {"type": "http", "scheme": "bearer", "bearerFormat": "JWT"}
+#     spec.components.security_scheme("bearerAuth", jwt_scheme)
+#     spec.options["security"] = [{"bearerAuth": []}]
+#     # spec.components.schema("Comment", schema=CommentResponseSchema)
+#     spec.components.schema("Comment", schema=CommentListResponseSchema)
+#     spec.path(view=get_comment_ALL)
+#     # spec.path(view="/comment/{cid}", func=get_comment)
+#     spec.path(view=get_comment)
+#     spec.path(view=add_comment)
+#     # spec.path(view=method_view,app=app)
+#     spec.path(view=get_post)
+#     spec.path(view=get_user)
+    
+    
+# @app.route('/docs')
+# @app.route('/docs/<path:path>')
+# def swagger_docs(path=None):
+#     if not path or path == 'index.html':
+#         return render_template('index.html', base_url='/docs')
 #     else:
-#         return json.dumps({"ERROR": f"No comment with Given Id {id}"})
+#         return send_from_directory('./swagger/static', secure_filename(path))
+
+
+
+
+##########################################  Blueprint register routes  ########################################################
+app.register_blueprint(user_blueprint) 
+
+app.register_blueprint(blog_blueprint) 
+
+app.register_blueprint(comment_blueprint) 
    
 if __name__ == '__main__':
     db.create_all() 
     port = int(os.environ.get('PORT', 5000))
+    
     app.run(debug=True,host='0.0.0.0', port=port)
