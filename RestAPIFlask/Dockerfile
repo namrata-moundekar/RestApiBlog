@@ -1,12 +1,12 @@
 # syntax=docker/dockerfile:1
 FROM python:3.9
-
-WORKDIR /RestAPIFlask
-COPY requirements.txt /RestAPIFlask/
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+WORKDIR /app
+COPY requirements.txt /app/
 RUN pip install -r requirements.txt
-COPY . /RestAPIFlask/
-EXPOSE 5000
-CMD python view.py
+COPY . /app/
+CMD [ "python", "-m" , "flask", "--app", "view", "run"]
 
 
 

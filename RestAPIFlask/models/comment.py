@@ -7,9 +7,7 @@ class Comment(db.Model):
     comment = db.Column(db.Text, nullable=False)
     blogid = db.Column('blogid',db.ForeignKey('blog.id'),unique=False)
     
-    def __init__(self, comment, blogid):
-          self.comment = comment
-          self.blogid = blogid
+    
  
         
  

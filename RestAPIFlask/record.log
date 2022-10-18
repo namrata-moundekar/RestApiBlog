@@ -155,3 +155,910 @@
 2022-10-12 11:45:45,028 WARNING werkzeug :  * Debugger is active!
 2022-10-12 11:45:45,032 INFO werkzeug :  * Debugger PIN: 103-074-127
 2022-10-12 11:46:42,229 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 11:46:42] "[31m[1mGET /user_register/ HTTP/1.1[0m" 405 -
+2022-10-12 11:58:51,480 DEBUG RestAPIFlask_old.view : Get all user
+2022-10-12 11:58:51,482 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 11:58:51] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-12 12:00:12,138 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask_old\\view.py', reloading
+2022-10-12 12:00:12,342 INFO werkzeug :  * Restarting with stat
+2022-10-12 12:00:14,089 WARNING werkzeug :  * Debugger is active!
+2022-10-12 12:00:14,093 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-12 12:05:20,336 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-12 12:05:20,336 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-12 12:05:20,338 INFO werkzeug :  * Restarting with stat
+2022-10-12 12:05:21,886 WARNING werkzeug :  * Debugger is active!
+2022-10-12 12:05:21,894 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-12 12:05:27,381 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 12:05:27] "[33mGET /get HTTP/1.1[0m" 404 -
+2022-10-12 12:05:32,094 DEBUG RestAPIFlask.view : Get all user
+2022-10-12 12:05:32,097 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 12:05:32] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-12 12:41:20,007 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-12 12:41:20,008 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-12 12:41:20,013 INFO werkzeug :  * Restarting with stat
+2022-10-12 12:41:21,530 WARNING werkzeug :  * Debugger is active!
+2022-10-12 12:41:21,538 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-12 12:41:25,695 DEBUG RestAPIFlask.view : Get all user
+2022-10-12 12:41:25,697 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 12:41:25] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-12 12:41:27,485 DEBUG RestAPIFlask.view : Get all user
+2022-10-12 12:41:27,486 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 12:41:27] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-12 12:43:54,791 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.100:5000
+2022-10-12 12:43:54,791 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-12 12:44:01,684 DEBUG RestAPIFlask.view : Get all user
+2022-10-12 12:44:01,691 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 12:44:01] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-12 12:44:15,928 DEBUG RestAPIFlask.view : Get all comments 
+2022-10-12 12:44:15,931 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 12:44:15] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-12 14:19:32,150 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.100:5000
+2022-10-12 14:19:32,150 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-12 14:19:35,999 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 14:19:35] "[33mGET / HTTP/1.1[0m" 404 -
+2022-10-12 14:19:42,191 DEBUG RestAPIFlask.view : Get all comments 
+2022-10-12 14:19:42,196 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 14:19:42] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-12 18:19:49,838 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-12 18:19:49,838 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-12 18:19:50,559 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 18:19:50] "GET /a HTTP/1.1" 200 -
+2022-10-12 18:20:01,423 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 18:20:01] "GET /a HTTP/1.1" 200 -
+2022-10-12 18:20:08,107 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 18:20:08] "GET /a HTTP/1.1" 200 -
+2022-10-12 18:21:52,320 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-12 18:21:52,320 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-12 18:22:33,032 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 18:22:33] "GET /a HTTP/1.1" 200 -
+2022-10-12 18:22:39,349 DEBUG RestAPIFlask.view : Get all user
+2022-10-12 18:22:39,355 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 18:22:39] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-12 18:23:32,045 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-12 18:23:32,045 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-12 18:23:38,635 DEBUG RestAPIFlask.view : Get all user
+2022-10-12 18:23:38,637 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 18:23:38] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-12 18:23:57,961 DEBUG RestAPIFlask.view : Get all user
+2022-10-12 18:23:57,965 INFO werkzeug : 127.0.0.1 - - [12/Oct/2022 18:23:57] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-13 13:06:19,656 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 13:06:19,656 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 13:08:32,195 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 13:08:32,196 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 13:08:32,202 INFO werkzeug :  * Restarting with stat
+2022-10-13 13:08:34,411 WARNING werkzeug :  * Debugger is active!
+2022-10-13 13:08:34,420 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 13:08:38,190 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:38] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-13 13:08:39,127 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:39] "[36mGET /get_user/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-10-13 13:08:39,129 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:39] "[36mGET /get_user/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-10-13 13:08:39,856 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:39] "[36mGET /get_user/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-13 13:08:40,104 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:40] "[36mGET /get_user/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-13 13:08:49,389 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:49] "[35m[1mGET /get_comment/ HTTP/1.1[0m" 500 -
+2022-10-13 13:08:49,736 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:49] "[36mGET /get_comment/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-10-13 13:08:49,737 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:49] "[36mGET /get_comment/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-10-13 13:08:50,003 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:50] "[36mGET /get_comment/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-13 13:08:50,207 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:08:50] "[36mGET /get_comment/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-13 13:10:04,058 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:10:04] "GET /a HTTP/1.1" 200 -
+2022-10-13 13:10:04,539 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:10:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-10-13 13:10:09,509 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:10:09] "[35m[1mGET /get_blog/ HTTP/1.1[0m" 500 -
+2022-10-13 13:10:09,860 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:10:09] "GET /get_blog/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2022-10-13 13:10:09,861 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:10:09] "GET /get_blog/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2022-10-13 13:10:11,113 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:10:11] "GET /get_blog/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2022-10-13 13:10:11,411 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:10:11] "[36mGET /get_blog/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-13 13:12:50,444 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 13:12:50,444 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 13:12:50,447 INFO werkzeug :  * Restarting with stat
+2022-10-13 13:12:52,089 WARNING werkzeug :  * Debugger is active!
+2022-10-13 13:12:52,097 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 13:12:54,762 DEBUG RestAPIFlask.view : Get all Blog post
+2022-10-13 13:12:54,765 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:12:54] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-13 13:12:58,502 DEBUG RestAPIFlask.view : Get all user
+2022-10-13 13:12:58,504 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:12:58] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-13 13:41:49,379 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 13:41:49,379 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 13:41:49,381 INFO werkzeug :  * Restarting with stat
+2022-10-13 13:41:51,377 WARNING werkzeug :  * Debugger is active!
+2022-10-13 13:41:51,389 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 13:42:55,634 DEBUG RestAPIFlask.view : Get all comments 
+2022-10-13 13:42:55,636 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:42:55] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-13 13:43:00,134 DEBUG RestAPIFlask.view : Get all user
+2022-10-13 13:43:00,136 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:43:00] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-13 13:43:18,615 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-13 13:43:18,824 INFO werkzeug :  * Restarting with stat
+2022-10-13 13:43:20,982 WARNING werkzeug :  * Debugger is active!
+2022-10-13 13:43:20,987 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 13:43:30,435 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 13:43:30,435 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 13:43:30,437 INFO werkzeug :  * Restarting with stat
+2022-10-13 13:43:31,998 WARNING werkzeug :  * Debugger is active!
+2022-10-13 13:43:32,002 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 13:43:35,849 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:43:35] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-13 13:43:36,188 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:43:36] "[36mGET /get_user/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-10-13 13:43:36,387 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:43:36] "[36mGET /get_user/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-10-13 13:43:36,798 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:43:36] "[36mGET /get_user/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-13 13:43:37,066 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:43:37] "[36mGET /get_user/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-10-13 13:43:53,682 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-13 13:43:53,893 INFO werkzeug :  * Restarting with stat
+2022-10-13 13:43:55,956 WARNING werkzeug :  * Debugger is active!
+2022-10-13 13:43:55,960 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 13:44:01,677 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 13:44:01,677 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 13:44:01,682 INFO werkzeug :  * Restarting with stat
+2022-10-13 13:44:04,081 WARNING werkzeug :  * Debugger is active!
+2022-10-13 13:44:04,092 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 13:44:05,840 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:44:05] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-13 13:44:12,144 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:44:12] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-13 13:44:25,827 DEBUG RestAPIFlask.view : Get token when login
+2022-10-13 13:44:25,828 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:44:25] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-13 13:45:25,629 DEBUG RestAPIFlask.view : Get all user
+2022-10-13 13:45:25,631 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:45:25] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-13 13:46:31,763 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:46:31] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-13 13:46:42,157 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-13 13:46:42,353 INFO werkzeug :  * Restarting with stat
+2022-10-13 13:46:44,166 WARNING werkzeug :  * Debugger is active!
+2022-10-13 13:46:44,171 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 13:47:07,558 DEBUG RestAPIFlask.view : Get all comments 
+2022-10-13 13:47:07,560 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 13:47:07] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-13 14:34:07,979 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 14:34:07,980 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 14:34:07,983 INFO werkzeug :  * Restarting with stat
+2022-10-13 14:34:09,644 WARNING werkzeug :  * Debugger is active!
+2022-10-13 14:34:09,649 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 14:34:13,703 DEBUG RestAPIFlask.view : Get all comments 
+2022-10-13 14:34:13,705 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 14:34:13] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-13 14:37:22,864 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 14:37:22] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-13 14:37:50,071 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 14:37:50] "[31m[1mPOST /comment/search/ HTTP/1.1[0m" 401 -
+2022-10-13 14:38:54,810 DEBUG RestAPIFlask.view : Get token when login
+2022-10-13 14:38:54,811 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 14:38:54] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-13 14:39:17,789 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 14:39:17] "POST /comment/search/ HTTP/1.1" 200 -
+2022-10-13 19:19:26,333 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 19:19:26,334 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 19:19:26,339 INFO werkzeug :  * Restarting with stat
+2022-10-13 19:19:32,439 WARNING werkzeug :  * Debugger is active!
+2022-10-13 19:19:32,456 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 19:19:36,156 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:19:36] "[33mGET /get HTTP/1.1[0m" 404 -
+2022-10-13 19:19:40,970 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:19:40] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-13 19:19:41,270 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:19:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-10-13 19:20:22,925 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:20:22] "GET /swagger/ HTTP/1.1" 200 -
+2022-10-13 19:20:24,585 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:20:24] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2022-10-13 19:20:24,836 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:20:24] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2022-10-13 19:20:25,703 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:20:25] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2022-10-13 19:20:25,792 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:20:25] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2022-10-13 19:20:28,366 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:20:28] "GET /static/swagger.json HTTP/1.1" 200 -
+2022-10-13 19:20:41,873 DEBUG RestAPIFlask.view : Get all Blog post
+2022-10-13 19:20:41,889 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:20:41] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-13 19:21:14,376 DEBUG RestAPIFlask.view : Get token when login
+2022-10-13 19:21:14,382 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:21:14] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-13 19:21:37,406 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:21:37] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-13 19:24:01,429 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 19:24:01,430 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 19:24:01,434 INFO werkzeug :  * Restarting with stat
+2022-10-13 19:24:05,104 WARNING werkzeug :  * Debugger is active!
+2022-10-13 19:24:05,118 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 19:24:18,851 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:24:18] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-13 19:27:59,375 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 19:27:59,376 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 19:27:59,382 INFO werkzeug :  * Restarting with stat
+2022-10-13 19:29:28,515 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 19:29:28,515 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 19:29:28,519 INFO werkzeug :  * Restarting with stat
+2022-10-13 19:29:31,877 WARNING werkzeug :  * Debugger is active!
+2022-10-13 19:29:31,887 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 19:29:32,137 DEBUG RestAPIFlask.view : Get all comments 
+2022-10-13 19:29:32,138 DEBUG RestAPIFlask.view : Get all comments 
+2022-10-13 19:29:32,143 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:29:32] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-13 19:29:32,144 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:29:32] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-13 19:29:35,592 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:29:35] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-13 19:29:37,324 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:29:37] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-13 19:30:15,138 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-13 19:30:15,475 INFO werkzeug :  * Restarting with stat
+2022-10-13 19:30:19,122 WARNING werkzeug :  * Debugger is active!
+2022-10-13 19:30:19,131 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 19:30:46,718 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-13 19:30:47,100 INFO werkzeug :  * Restarting with stat
+2022-10-13 19:30:50,227 WARNING werkzeug :  * Debugger is active!
+2022-10-13 19:30:50,240 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 19:31:02,849 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-13 19:31:02,850 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-13 19:31:02,855 INFO werkzeug :  * Restarting with stat
+2022-10-13 19:31:08,175 WARNING werkzeug :  * Debugger is active!
+2022-10-13 19:31:08,191 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-13 19:31:12,573 INFO werkzeug : 127.0.0.1 - - [13/Oct/2022 19:31:12] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-14 10:48:15,518 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 10:48:15,518 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 10:48:15,521 INFO werkzeug :  * Restarting with stat
+2022-10-14 10:48:17,351 WARNING werkzeug :  * Debugger is active!
+2022-10-14 10:48:17,359 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 10:48:21,333 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:48:21] "[33mGET /get HTTP/1.1[0m" 404 -
+2022-10-14 10:48:22,451 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:48:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-10-14 10:48:30,701 INFO RestAPIFlask.view : Get all comments 
+2022-10-14 10:48:30,704 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:48:30] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-14 10:49:19,393 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:49:19] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 10:49:20,621 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:49:20] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 10:51:10,085 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:51:10] "[31m[1mPOST /post_comment HTTP/1.1[0m" 401 -
+2022-10-14 10:52:00,541 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 10:52:00,757 INFO werkzeug :  * Restarting with stat
+2022-10-14 10:52:02,465 WARNING werkzeug :  * Debugger is active!
+2022-10-14 10:52:02,470 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 10:52:10,080 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 10:52:10,081 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 10:52:10,085 INFO werkzeug :  * Restarting with stat
+2022-10-14 10:52:12,593 WARNING werkzeug :  * Debugger is active!
+2022-10-14 10:52:12,603 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 10:52:20,637 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:52:20] "[31m[1mPOST /post_comment HTTP/1.1[0m" 401 -
+2022-10-14 10:52:25,993 INFO RestAPIFlask.view : Get token when login
+2022-10-14 10:52:25,994 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:52:25] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 10:52:55,205 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:52:55] "[35m[1mPOST /post_comment HTTP/1.1[0m" 500 -
+2022-10-14 10:54:00,623 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 10:54:00,909 INFO werkzeug :  * Restarting with stat
+2022-10-14 10:54:03,591 WARNING werkzeug :  * Debugger is active!
+2022-10-14 10:54:03,603 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 10:54:10,183 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 10:54:10,184 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 10:54:10,187 INFO werkzeug :  * Restarting with stat
+2022-10-14 10:54:12,678 WARNING werkzeug :  * Debugger is active!
+2022-10-14 10:54:12,682 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 10:54:13,563 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:54:13] "[35m[1mPOST /post_comment HTTP/1.1[0m" 500 -
+2022-10-14 10:55:22,066 INFO RestAPIFlask.view : Get all comments 
+2022-10-14 10:55:22,069 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:55:22] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-14 10:55:58,800 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:55:58] "[35m[1mPOST /post_comment HTTP/1.1[0m" 500 -
+2022-10-14 10:56:06,385 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:56:06] "POST /post_comment HTTP/1.1" 200 -
+2022-10-14 10:56:21,310 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:56:21] "[35m[1mPOST /post_comment HTTP/1.1[0m" 500 -
+2022-10-14 10:57:41,652 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 10:57:41,652 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 10:57:41,655 INFO werkzeug :  * Restarting with stat
+2022-10-14 10:57:43,326 WARNING werkzeug :  * Debugger is active!
+2022-10-14 10:57:43,330 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 10:57:46,151 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:57:46] "[35m[1mPOST /post_comment HTTP/1.1[0m" 500 -
+2022-10-14 10:58:19,505 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:58:19] "[35m[1mPOST /post_comment HTTP/1.1[0m" 500 -
+2022-10-14 10:58:32,261 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:58:32] "POST /post_comment HTTP/1.1" 200 -
+2022-10-14 10:58:45,238 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:58:45] "[35m[1mPOST /post_comment HTTP/1.1[0m" 500 -
+2022-10-14 10:59:47,219 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 10:59:47] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 11:00:29,540 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:00:29] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 11:00:35,397 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:00:35] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 11:00:40,748 INFO RestAPIFlask.view : Blog added successfully
+2022-10-14 11:00:40,752 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:00:40] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 11:00:53,745 INFO RestAPIFlask.view : Get all Blog post
+2022-10-14 11:00:53,748 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:00:53] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-14 11:33:24,106 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 11:33:24,106 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 11:33:24,108 INFO werkzeug :  * Restarting with stat
+2022-10-14 11:33:25,888 WARNING werkzeug :  * Debugger is active!
+2022-10-14 11:33:25,893 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 11:34:48,315 INFO RestAPIFlask.view : User added successfully
+2022-10-14 11:34:48,321 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:34:48] "POST /user_register/ HTTP/1.1" 200 -
+2022-10-14 11:35:53,234 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:35:53] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 11:36:01,945 INFO RestAPIFlask.view : Get token when login
+2022-10-14 11:36:01,948 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:36:01] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 11:36:18,790 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:36:18] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-14 11:40:46,138 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 11:40:46,351 INFO werkzeug :  * Restarting with stat
+2022-10-14 11:40:48,080 WARNING werkzeug :  * Debugger is active!
+2022-10-14 11:40:48,086 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 11:40:53,067 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 11:40:53,067 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 11:40:53,069 INFO werkzeug :  * Restarting with stat
+2022-10-14 11:40:54,733 WARNING werkzeug :  * Debugger is active!
+2022-10-14 11:40:54,738 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 11:41:01,924 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:41:01] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-14 11:50:15,569 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 11:50:15,570 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 11:50:15,572 INFO werkzeug :  * Restarting with stat
+2022-10-14 11:50:17,603 WARNING werkzeug :  * Debugger is active!
+2022-10-14 11:50:17,607 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 11:50:26,758 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 11:50:26] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-14 12:04:23,625 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 12:04:23,625 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 12:04:23,628 INFO werkzeug :  * Restarting with stat
+2022-10-14 12:04:25,098 WARNING werkzeug :  * Debugger is active!
+2022-10-14 12:04:25,102 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 12:04:41,611 INFO RestAPIFlask.view : Get all Blog post
+2022-10-14 12:04:41,614 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:04:41] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-14 12:04:48,851 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:04:48] "[31m[1mPOST /get_blog/ HTTP/1.1[0m" 401 -
+2022-10-14 12:04:54,248 INFO RestAPIFlask.view : Get token when login
+2022-10-14 12:04:54,249 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:04:54] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 12:05:10,912 INFO RestAPIFlask.view : Blog added successfully
+2022-10-14 12:05:10,918 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:05:10] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 12:05:25,227 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:05:25] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 12:05:34,111 INFO RestAPIFlask.view : Blog added successfully
+2022-10-14 12:05:34,116 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:05:34] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 12:06:22,672 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 12:06:22,892 INFO werkzeug :  * Restarting with stat
+2022-10-14 12:06:24,865 WARNING werkzeug :  * Debugger is active!
+2022-10-14 12:06:24,869 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 12:06:31,692 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 12:06:31,851 INFO werkzeug :  * Restarting with stat
+2022-10-14 12:06:33,808 WARNING werkzeug :  * Debugger is active!
+2022-10-14 12:06:33,813 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 12:06:57,304 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 12:06:57,460 INFO werkzeug :  * Restarting with stat
+2022-10-14 12:06:59,071 WARNING werkzeug :  * Debugger is active!
+2022-10-14 12:06:59,077 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 12:07:39,558 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 12:07:39,755 INFO werkzeug :  * Restarting with stat
+2022-10-14 12:07:41,354 WARNING werkzeug :  * Debugger is active!
+2022-10-14 12:07:41,358 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 12:07:52,399 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 12:07:52,399 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 12:07:52,402 INFO werkzeug :  * Restarting with stat
+2022-10-14 12:07:54,228 WARNING werkzeug :  * Debugger is active!
+2022-10-14 12:07:54,233 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 12:09:05,114 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:09:05] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 12:09:17,180 INFO RestAPIFlask.view : Get all user
+2022-10-14 12:09:17,181 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:09:17] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 12:09:32,390 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:09:32] "GET /swagger/ HTTP/1.1" 200 -
+2022-10-14 12:09:32,694 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:09:32] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2022-10-14 12:09:32,745 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:09:32] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2022-10-14 12:09:32,767 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:09:32] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2022-10-14 12:09:32,871 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:09:32] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2022-10-14 12:09:34,393 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 12:09:34] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2022-10-14 13:19:07,237 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 13:19:07,237 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 13:19:07,240 INFO werkzeug :  * Restarting with stat
+2022-10-14 13:19:09,265 WARNING werkzeug :  * Debugger is active!
+2022-10-14 13:19:09,270 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 13:19:12,250 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:12] "GET /swagger/ HTTP/1.1" 200 -
+2022-10-14 13:19:12,942 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:12] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2022-10-14 13:19:13,332 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:13] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2022-10-14 13:19:13,358 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:13] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2022-10-14 13:19:13,360 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:13] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2022-10-14 13:19:13,878 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:13] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2022-10-14 13:19:13,913 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:13] "[36mGET /swagger/favicon-32x32.png HTTP/1.1[0m" 304 -
+2022-10-14 13:19:19,006 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:19] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 13:19:27,667 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:27] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 13:19:33,182 INFO RestAPIFlask.view : Get token when login
+2022-10-14 13:19:33,183 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:33] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 13:19:48,748 INFO RestAPIFlask.view : Get all user
+2022-10-14 13:19:48,750 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:19:48] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 13:20:32,659 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 13:20:32,949 INFO werkzeug :  * Restarting with stat
+2022-10-14 13:20:35,001 WARNING werkzeug :  * Debugger is active!
+2022-10-14 13:20:35,006 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 13:20:39,336 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 13:20:39,336 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 13:20:39,338 INFO werkzeug :  * Restarting with stat
+2022-10-14 13:20:41,113 WARNING werkzeug :  * Debugger is active!
+2022-10-14 13:20:41,117 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 13:20:57,727 INFO RestAPIFlask.view : Get all user
+2022-10-14 13:20:57,732 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:20:57] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 13:53:11,458 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 13:53:11,459 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 13:53:11,462 INFO werkzeug :  * Restarting with stat
+2022-10-14 13:53:13,955 WARNING werkzeug :  * Debugger is active!
+2022-10-14 13:53:13,959 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 13:53:14,114 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:53:14] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 13:53:20,076 INFO RestAPIFlask.view : Get token when login
+2022-10-14 13:53:20,077 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:53:20] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 13:53:33,593 INFO RestAPIFlask.view : Get all user
+2022-10-14 13:53:33,595 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:53:33] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 13:53:56,538 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 13:53:56,539 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 13:53:56,541 INFO werkzeug :  * Restarting with stat
+2022-10-14 13:53:58,186 WARNING werkzeug :  * Debugger is active!
+2022-10-14 13:53:58,191 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 13:54:24,933 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 13:54:25,137 INFO werkzeug :  * Restarting with stat
+2022-10-14 13:54:26,965 WARNING werkzeug :  * Debugger is active!
+2022-10-14 13:54:26,969 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 13:54:29,931 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 13:54:29,931 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 13:54:29,933 INFO werkzeug :  * Restarting with stat
+2022-10-14 13:54:31,604 WARNING werkzeug :  * Debugger is active!
+2022-10-14 13:54:31,609 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 13:54:35,117 INFO RestAPIFlask.view : Get all user
+2022-10-14 13:54:35,118 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 13:54:35] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 14:42:08,957 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 14:42:08,957 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 14:42:08,962 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:42:10,754 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:42:10,759 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:42:14,054 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:42:14] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 14:42:20,992 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:42:20] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 14:42:46,772 INFO RestAPIFlask.view : Get token when login
+2022-10-14 14:42:46,773 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:42:46] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 14:43:01,734 INFO RestAPIFlask.view : Get all user
+2022-10-14 14:43:01,735 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:43:01] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 14:43:21,906 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:43:21] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 14:43:53,713 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 14:43:53,942 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:43:55,571 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:43:55,575 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:44:47,755 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 14:44:47,755 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 14:44:47,758 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:44:49,391 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:44:49,396 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:45:37,057 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:45:37] "[31m[1mPOST /get_blog/ HTTP/1.1[0m" 401 -
+2022-10-14 14:45:57,581 INFO RestAPIFlask.view : Get token when login
+2022-10-14 14:45:57,582 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:45:57] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 14:46:23,144 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:46:23] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:46:30,370 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:46:30] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:46:39,745 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:46:39] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:46:58,364 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:46:58] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:47:09,833 INFO RestAPIFlask.view : Get all Blog post
+2022-10-14 14:47:09,836 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:47:09] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:47:47,905 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:47:47] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:48:20,729 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 14:48:20,901 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:48:23,029 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:48:23,036 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:48:48,415 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 14:48:48,416 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 14:48:48,418 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:48:50,321 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:48:50,325 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:48:54,480 INFO RestAPIFlask.view : Blog added successfully
+2022-10-14 14:48:54,487 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:48:54] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:49:13,872 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 14:49:14,064 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:49:15,721 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:49:15,726 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:49:21,710 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 14:49:21,710 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 14:49:21,712 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:49:23,488 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:49:23,493 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:49:27,312 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:49:27] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:49:33,265 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:49:33] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:49:47,206 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 14:49:47,431 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:49:49,223 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:49:49,228 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:50:01,496 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 14:50:01,496 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 14:50:01,499 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:50:03,526 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:50:03,533 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:50:04,828 INFO RestAPIFlask.view : Blog added successfully
+2022-10-14 14:50:04,833 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:50:04] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:51:04,003 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 14:51:04,221 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:51:05,949 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:51:05,954 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:52:10,320 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 14:52:10,576 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:52:12,472 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:52:12,480 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:52:27,293 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 14:52:27,451 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:52:29,253 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:52:29,257 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:57:09,006 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 14:57:09,211 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:57:14,562 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 14:57:14,563 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 14:57:14,566 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:57:16,554 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:57:16,558 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:57:18,176 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:57:18] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:57:28,090 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:57:28] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:57:34,374 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:57:34] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:57:48,096 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:57:48] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:58:42,152 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 14:58:42,364 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:58:44,139 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:58:44,144 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:58:48,094 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 14:58:48,094 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 14:58:48,099 INFO werkzeug :  * Restarting with stat
+2022-10-14 14:58:50,001 WARNING werkzeug :  * Debugger is active!
+2022-10-14 14:58:50,007 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 14:58:51,120 INFO RestAPIFlask.view : Blog added successfully
+2022-10-14 14:58:51,128 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:58:51] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 14:59:04,712 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:59:04] "[31m[1mPOST /get_blog/ HTTP/1.1[0m" 422 -
+2022-10-14 14:59:23,259 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:59:23] "[31m[1mPOST /get_blog/ HTTP/1.1[0m" 422 -
+2022-10-14 14:59:30,551 INFO RestAPIFlask.view : Get token when login
+2022-10-14 14:59:30,552 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 14:59:30] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 15:00:05,140 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:00:05] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:00:10,429 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:00:10] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:00:26,131 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:00:26] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:00:45,103 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:00:45] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 15:00:50,688 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:00:50] "[32mGET /get_blog HTTP/1.1[0m" 308 -
+2022-10-14 15:00:50,706 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:00:50] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:00:56,682 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:00:56] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:01:07,478 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:01:07] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:04:18,356 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 15:04:18,562 INFO werkzeug :  * Restarting with stat
+2022-10-14 15:04:23,671 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 15:04:23,671 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 15:04:23,673 INFO werkzeug :  * Restarting with stat
+2022-10-14 15:04:25,238 WARNING werkzeug :  * Debugger is active!
+2022-10-14 15:04:25,242 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 15:04:34,038 INFO RestAPIFlask.view : Get all Blog post
+2022-10-14 15:04:34,039 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:04:34] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:04:39,963 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:04:39] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:04:45,486 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:04:45] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:05:06,473 INFO RestAPIFlask.view : Blog added successfully
+2022-10-14 15:05:06,480 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:05:06] "POST /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:05:16,759 INFO RestAPIFlask.view : Get all Blog post
+2022-10-14 15:05:16,765 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:05:16] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-14 15:06:21,648 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:06:21] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 15:06:27,762 INFO RestAPIFlask.view : Get token when login
+2022-10-14 15:06:27,763 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:06:27] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 15:06:49,875 INFO RestAPIFlask.view : Get all user
+2022-10-14 15:06:49,877 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:06:49] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 15:06:54,154 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 15:06:54] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 15:26:56,342 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 15:26:56,343 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 15:26:56,345 INFO werkzeug :  * Restarting with stat
+2022-10-14 15:26:57,887 WARNING werkzeug :  * Debugger is active!
+2022-10-14 15:26:57,891 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:06:20,176 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:06:20,384 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:06:22,211 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:06:22,215 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:07:12,038 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:07:12,272 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:07:14,553 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:07:14,558 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:08:28,510 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:08:28,510 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:08:28,513 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:08:30,049 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:08:30,053 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:08:38,835 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:08:38] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 16:08:45,102 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:08:45] "[31m[1mPOST /comment/search/ HTTP/1.1[0m" 401 -
+2022-10-14 16:08:59,903 INFO RestAPIFlask.view : Get token when login
+2022-10-14 16:08:59,904 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:08:59] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 16:09:14,863 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:09:14] "POST /comment/search/ HTTP/1.1" 200 -
+2022-10-14 16:09:33,747 INFO RestAPIFlask.view : Get all comments 
+2022-10-14 16:09:33,748 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:09:33] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-14 16:10:03,983 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:10:03] "POST /post_comment HTTP/1.1" 200 -
+2022-10-14 16:11:04,058 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:11:04] "[35m[1mPOST /post_comment HTTP/1.1[0m" 500 -
+2022-10-14 16:11:30,944 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:11:31,212 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:11:33,039 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:11:33,044 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:11:46,500 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:11:46,500 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:11:46,502 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:11:48,000 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:11:48,004 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:11:53,736 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:11:53] "[32mPOST /post_comment HTTP/1.1[0m" 308 -
+2022-10-14 16:11:53,843 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:11:53] "[35m[1mPOST /post_comment/ HTTP/1.1[0m" 500 -
+2022-10-14 16:14:02,079 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:14:02,265 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:14:04,218 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:14:04,223 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:15:01,238 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:15:01,405 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:15:02,974 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:15:02,979 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:15:19,968 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:15:19,968 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:15:19,973 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:15:21,636 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:15:21,642 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:15:23,930 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:15:23] "[32mPOST /post_comment HTTP/1.1[0m" 308 -
+2022-10-14 16:15:24,196 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:15:24] "[35m[1mPOST /post_comment/ HTTP/1.1[0m" 500 -
+2022-10-14 16:16:25,421 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:16:25,618 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:16:27,247 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:16:27,251 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:16:30,265 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:16:30,265 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:16:30,267 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:16:31,829 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:16:31,834 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:16:34,565 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:16:34] "[32mPOST /post_comment HTTP/1.1[0m" 308 -
+2022-10-14 16:16:34,675 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:16:34] "[35m[1mPOST /post_comment/ HTTP/1.1[0m" 500 -
+2022-10-14 16:17:26,944 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:17:27,178 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:17:28,839 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:17:28,844 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:17:46,242 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:17:46,428 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:17:48,050 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:17:48,054 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:17:53,006 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:17:53,006 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:17:53,008 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:17:54,650 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:17:54,654 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:17:56,344 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:17:56] "[32mPOST /post_comment HTTP/1.1[0m" 308 -
+2022-10-14 16:17:56,460 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:17:56] "[35m[1mPOST /post_comment/ HTTP/1.1[0m" 500 -
+2022-10-14 16:20:07,592 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:20:07,785 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:20:09,831 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:20:09,842 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:21:05,775 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:21:05,942 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:21:07,906 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:21:07,913 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:21:23,133 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:21:23,308 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:21:24,987 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:21:24,992 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:21:29,630 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:21:29,631 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:21:29,633 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:21:31,209 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:21:31,214 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:21:34,901 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:21:34] "[32mPOST /post_comment HTTP/1.1[0m" 308 -
+2022-10-14 16:21:35,016 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:21:35] "[35m[1mPOST /post_comment/ HTTP/1.1[0m" 500 -
+2022-10-14 16:23:31,109 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:23:31,268 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:23:33,078 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:23:33,083 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:24:31,358 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:24:31,584 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:24:33,382 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:24:33,386 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:24:38,454 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:24:38,454 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:24:38,456 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:24:40,148 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:24:40,153 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:24:42,404 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:24:42] "[32mPOST /post_comment HTTP/1.1[0m" 308 -
+2022-10-14 16:24:42,414 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:24:42] "[31m[1mPOST /post_comment/ HTTP/1.1[0m" 401 -
+2022-10-14 16:24:48,478 INFO RestAPIFlask.view : Get token when login
+2022-10-14 16:24:48,480 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:24:48] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 16:25:13,364 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:25:13] "[32mPOST /post_comment HTTP/1.1[0m" 308 -
+2022-10-14 16:25:13,375 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:25:13] "[31m[1mPOST /post_comment/ HTTP/1.1[0m" 401 -
+2022-10-14 16:25:21,562 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:25:21] "[35m[1mPOST /post_comment/ HTTP/1.1[0m" 500 -
+2022-10-14 16:26:09,912 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:26:10,149 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:26:12,308 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:26:12,315 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:26:16,772 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:26:16,952 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:26:18,620 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:26:18,624 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:26:30,886 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:26:30,886 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:26:30,889 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:26:32,585 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:26:32,589 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:26:34,454 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:26:34] "[35m[1mPOST /post_comment/ HTTP/1.1[0m" 500 -
+2022-10-14 16:28:36,760 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:28:36,950 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:28:38,836 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:28:38,842 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:28:43,705 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:28:43,705 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:28:43,708 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:28:45,348 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:28:45,352 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:28:46,926 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:28:46] "[35m[1mPOST /post_comment/ HTTP/1.1[0m" 500 -
+2022-10-14 16:31:44,980 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\models\\comment.py', reloading
+2022-10-14 16:31:45,244 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:31:47,024 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:31:47,030 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:31:56,901 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:31:56,901 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:31:56,903 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:31:58,762 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:31:58,773 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:32:00,147 INFO RestAPIFlask.view : Comment added successfully
+2022-10-14 16:32:00,154 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:32:00] "POST /post_comment/ HTTP/1.1" 200 -
+2022-10-14 16:33:34,044 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:33:34,232 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:33:36,004 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:33:36,009 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:33:42,444 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:33:42,444 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:33:42,446 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:33:44,489 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:33:44,497 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:33:44,663 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:33:44] "POST /post_comment/ HTTP/1.1" 200 -
+2022-10-14 16:33:51,096 INFO RestAPIFlask.view : Comment added successfully
+2022-10-14 16:33:51,100 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:33:51] "POST /post_comment/ HTTP/1.1" 200 -
+2022-10-14 16:45:29,439 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:45:29,614 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:45:31,405 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:45:31,409 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:46:39,449 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:46:39,612 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:46:41,348 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:46:41,352 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:47:11,974 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:47:11,974 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:47:11,977 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:47:14,414 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:47:14,420 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:47:19,554 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:47:19] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-14 16:49:32,967 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:49:33,121 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:49:34,921 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:49:34,926 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:49:46,563 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:49:46,563 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:49:46,565 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:49:48,386 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:49:48,395 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:49:50,195 INFO RestAPIFlask.view : Get all user
+2022-10-14 16:49:50,197 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:49:50] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:50:27,393 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:50:27,633 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:50:29,356 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:50:29,360 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:50:36,944 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:50:37,169 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:50:39,140 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:50:39,144 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:50:44,257 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:50:44,258 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:50:44,260 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:50:45,993 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:50:46,002 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:50:47,331 INFO RestAPIFlask.view : Get all user
+2022-10-14 16:50:47,333 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:50:47] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:50:54,660 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:50:54] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:51:17,516 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:51:17,765 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:51:19,361 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:51:19,366 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:51:29,226 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:51:29,227 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:51:29,229 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:51:30,883 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:51:30,887 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:51:34,869 INFO RestAPIFlask.view : Get all user
+2022-10-14 16:51:34,871 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:51:34] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:51:39,531 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:51:39] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:51:45,485 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:51:45] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:51:57,622 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:51:57,622 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:51:57,624 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:51:59,566 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:51:59,571 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:51:59,858 INFO RestAPIFlask.view : Get all user
+2022-10-14 16:51:59,860 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:51:59] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:53:09,625 INFO RestAPIFlask.view : Get all user
+2022-10-14 16:53:09,626 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:53:09] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:53:18,906 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:53:18] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:53:19,879 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:53:19] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:53:20,564 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:53:20] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:57:39,454 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:57:39,454 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:57:39,456 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:57:40,966 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:57:40,970 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:57:53,421 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:57:53] "[33mGET /get_user/ HTTP/1.1[0m" 404 -
+2022-10-14 16:58:09,278 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:58:09,457 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:58:11,700 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:58:11,707 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:58:16,702 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:58:16,702 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:58:16,704 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:58:18,611 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:58:18,623 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:58:20,145 INFO RestAPIFlask.view : Get all user
+2022-10-14 16:58:20,146 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:58:20] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 16:59:47,246 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 16:59:47,437 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:59:49,131 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:59:49,136 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:59:54,118 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 16:59:54,119 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 16:59:54,121 INFO werkzeug :  * Restarting with stat
+2022-10-14 16:59:55,995 WARNING werkzeug :  * Debugger is active!
+2022-10-14 16:59:56,002 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 16:59:57,468 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 16:59:57] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 17:00:06,618 INFO RestAPIFlask.view : Get token when login
+2022-10-14 17:00:06,619 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 17:00:06] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 17:00:30,866 INFO RestAPIFlask.view : Get all user
+2022-10-14 17:00:30,868 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 17:00:30] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-14 18:02:26,962 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 18:02:27,212 INFO werkzeug :  * Restarting with stat
+2022-10-14 18:02:29,068 WARNING werkzeug :  * Debugger is active!
+2022-10-14 18:02:29,073 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 18:02:32,148 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 18:02:32,148 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 18:02:32,150 INFO werkzeug :  * Restarting with stat
+2022-10-14 18:02:33,862 WARNING werkzeug :  * Debugger is active!
+2022-10-14 18:02:33,867 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 18:51:10,070 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 18:51:10] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 19:09:24,446 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 19:09:24] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 19:09:44,007 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 19:09:44,205 INFO werkzeug :  * Restarting with stat
+2022-10-14 19:09:45,990 WARNING werkzeug :  * Debugger is active!
+2022-10-14 19:09:45,995 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 19:11:19,623 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 19:11:19,623 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 19:11:19,625 INFO werkzeug :  * Restarting with stat
+2022-10-14 19:11:21,365 WARNING werkzeug :  * Debugger is active!
+2022-10-14 19:11:21,370 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 19:11:23,407 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 19:11:23] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-14 19:11:28,731 INFO RestAPIFlask.view : Get token when login
+2022-10-14 19:11:28,733 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 19:11:28] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-14 19:11:53,444 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 19:11:53] "[35m[1mGET /get_user/ HTTP/1.1[0m" 500 -
+2022-10-14 19:12:31,573 INFO werkzeug :  * Detected change in 'D:\\blog\\Flask\\RestAPIFlask\\view.py', reloading
+2022-10-14 19:12:31,871 INFO werkzeug :  * Restarting with stat
+2022-10-14 19:12:33,842 WARNING werkzeug :  * Debugger is active!
+2022-10-14 19:12:33,847 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 19:12:39,004 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-14 19:12:39,004 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-14 19:12:39,007 INFO werkzeug :  * Restarting with stat
+2022-10-14 19:12:40,656 WARNING werkzeug :  * Debugger is active!
+2022-10-14 19:12:40,668 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-14 19:12:47,008 INFO RestAPIFlask.view : Get all user
+2022-10-14 19:12:47,011 INFO werkzeug : 127.0.0.1 - - [14/Oct/2022 19:12:47] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-17 12:12:36,104 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-17 12:12:36,107 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-17 12:12:36,114 INFO werkzeug :  * Restarting with stat
+2022-10-17 12:12:40,740 WARNING werkzeug :  * Debugger is active!
+2022-10-17 12:12:40,758 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-17 12:12:59,860 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:12:59] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-17 12:13:00,297 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:13:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-10-17 12:13:06,400 INFO RestAPIFlask.view : Get all comments 
+2022-10-17 12:13:06,409 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:13:06] "GET /get_comment/ HTTP/1.1" 200 -
+2022-10-17 12:22:32,499 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:22:32] "GET /swagger/ HTTP/1.1" 200 -
+2022-10-17 12:22:35,831 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:22:35] "[36mGET /swagger/index.css HTTP/1.1[0m" 304 -
+2022-10-17 12:22:36,242 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:22:36] "[36mGET /swagger/swagger-ui.css HTTP/1.1[0m" 304 -
+2022-10-17 12:22:36,395 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:22:36] "[36mGET /swagger/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2022-10-17 12:22:36,967 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:22:36] "[36mGET /swagger/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2022-10-17 12:22:37,767 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:22:37] "[36mGET /static/swagger.json HTTP/1.1[0m" 304 -
+2022-10-17 12:53:08,408 INFO RestAPIFlask.view : Get all Blog post
+2022-10-17 12:53:08,425 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:53:08] "GET /get_blog/ HTTP/1.1" 200 -
+2022-10-17 12:53:21,774 INFO RestAPIFlask.view : Get blog with particular id
+2022-10-17 12:53:21,780 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:53:21] "GET /blog/2 HTTP/1.1" 200 -
+2022-10-17 12:59:49,949 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 12:59:49] "[31m[1mGET /get_user/ HTTP/1.1[0m" 401 -
+2022-10-17 13:00:04,254 INFO RestAPIFlask.view : Get token when login
+2022-10-17 13:00:04,257 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 13:00:04] "POST /userlogin/ HTTP/1.1" 200 -
+2022-10-17 13:00:42,514 INFO RestAPIFlask.view : Get all user
+2022-10-17 13:00:42,522 INFO werkzeug : 127.0.0.1 - - [17/Oct/2022 13:00:42] "GET /get_user/ HTTP/1.1" 200 -
+2022-10-18 11:40:40,699 INFO werkzeug : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2022-10-18 11:40:40,704 INFO werkzeug : [33mPress CTRL+C to quit[0m
+2022-10-18 11:40:40,714 INFO werkzeug :  * Restarting with stat
+2022-10-18 11:40:46,658 WARNING werkzeug :  * Debugger is active!
+2022-10-18 11:40:46,685 INFO werkzeug :  * Debugger PIN: 103-074-127
+2022-10-18 11:44:52,043 INFO werkzeug : 127.0.0.1 - - [18/Oct/2022 11:44:52] "[33mGET /get HTTP/1.1[0m" 404 -
+2022-10-18 11:44:53,952 INFO werkzeug : 127.0.0.1 - - [18/Oct/2022 11:44:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-10-18 11:45:07,106 INFO RestAPIFlask.view : Get all comments 
+2022-10-18 11:45:07,114 INFO werkzeug : 127.0.0.1 - - [18/Oct/2022 11:45:07] "GET /get_comment/ HTTP/1.1" 200 -

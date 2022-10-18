@@ -1,8 +1,7 @@
-from flask import Flask, jsonify, render_template, send_from_directory
+from flask import Flask, jsonify, send_from_directory
 from marshmallow import Schema, fields
 from werkzeug.utils import secure_filename
 from datetime import datetime
-from flask import request,render_template
 import json
 from flask_jwt_extended import create_access_token
 from flask_jwt_extended import JWTManager
@@ -14,7 +13,6 @@ from flask_marshmallow import Marshmallow, fields
 from  werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_marshmallow import Marshmallow, fields
 from flask_restful import Api
 import os
 import logging
@@ -27,14 +25,19 @@ from flask import current_app
 from flask import make_response
 from flask_swagger import swagger
 from flask_swagger_ui import get_swaggerui_blueprint 
-from RestAPIFlask_old.models import *
-from .migrate_cmd import db, migrate
+# from RestAPIFlask.models import *
+from .migrate_cmd import db, migrate,redis_cache
 from .models.user import User
 from .models.comment import Comment
 from .models.blog import Blog
+from .constants import USER_LIST
+from ast import literal_eval
+from flask_caching import Cache
 
 
-logging.basicConfig(filename='record.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(name)s : %(message)s')
+
+#######################     Logging Starts   ######################################
+logging.basicConfig(filename='record.log', level=logging.INFO, format='%(asctime)s %(levelname)s %(name)s : %(message)s')
 
 #######################    APP CONFIG HERE  ########################################
 """      app config here    """
@@ -43,10 +46,29 @@ logging.basicConfig(filename='record.log', level=logging.DEBUG, format='%(asctim
 app = Flask(__name__, template_folder='./swagger/templates')
 app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://root:root@localhost/flaskwebapp'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
-# db = SQLAlchemy(app)
+
+ # configure the redis
+# app.config["REDIS_HOST"] = "localhost"
+# app.config["REDIS_PASSWORD"] = "password"
+# app.config["REDIS_PORT"] = 6379
+
+#######################    Caching CONFIG HERE  ########################################
+"""      Caching config here    """
+
+cache = Cache(config = {
+    "DEBUG": True,          # some Flask specific configs
+    "CACHE_TYPE": "SimpleCache",  # Flask-Caching related configs
+    "CACHE_DEFAULT_TIMEOUT": 300
+})
+
+
+
 ma = Marshmallow(app)
 api = Api(app)
 
+cache.init_app(app)
+
+# redis_cache.init_app(app)
 db.init_app(app)
 migrate.init_app(app, db)
 
@@ -90,15 +112,13 @@ comments_schema = CommentSchema(many=True)
 
 
 
-    
-
-
-
 ################################   Bluprint specific  ####################################################
 
 user_blueprint = Blueprint('user_blueprint', __name__)
 blog_blueprint = Blueprint('blog_blueprint', __name__)
 comment_blueprint = Blueprint('comment_blueprint', __name__)
+
+
 
 ###############################   swagger specific  ####################################################
 
@@ -122,6 +142,10 @@ app.register_blueprint(SWAGGERUI_BLUEPRINT, url_prefix=SWAGGER_URL)
 ##########################      USER REGISTER AND LOGIN CODE HERE     #####################################
 
 
+@app.route('/a')
+def welcome():
+    return "welcome"
+
 @user_blueprint.route('/user_register/', methods = ['POST'])
 def register():
     """ REGISTER USER WITH USERNAME AND PASSWORD"""
@@ -135,12 +159,12 @@ def register():
             usr = User(name=data["name"],password = generate_password_hash(data["password"]))
             db.session.add(usr)
             db.session.commit()
-            app.logger.debug("User added successfully")
+            app.logger.info("User added successfully")
             return json.dumps({"SUCCESS" : f"Record ({usr.id}) Added Successfully...! 200"})
             # return Response(all_user, mimetype="application/json", status=200)
         
     else:
-        app.logger.debug("User required all fields.")
+        app.logger.info("User required all fields.")
         return json.dumps({"ERROR" : "EMPTY BODY, ALL FIELDS REQUIRED"})
 
 
@@ -157,7 +181,7 @@ def login():
             user = User.query.filter_by(name=name).first()
             if check_password_hash(user.password,password):
                     jwt_token=create_access_token(identity=user.name)
-                    app.logger.debug("Get token when login")
+                    app.logger.info("Get token when login")
                     return json.dumps({"token":jwt_token})
                     
             else:
@@ -171,24 +195,30 @@ def login():
 
 
 @user_blueprint.route('/get_user/', methods = ['GET'])
+@jwt_required()
+@cache.cached(timeout=30)
 def get_user():
-    """Get List of User
+    """Get List of Users
    
     """
+    current_user = get_jwt_identity()
+    access_token = create_access_token(identity = current_user)
+    if cache.get('USER_LIST'):
+            print("Getting User Data from redis Cache")
+            users = cache.get(USER_LIST)
+            print("all_user before",users)
+            return users_schema.dump(users)
+    else:
+        all_user = User.query.all()
+        print("all_user after",all_user)
+        print("cache",cache)
+        app.logger.info("Get all user")
+        return users_schema.dump(all_user)
     
-    all_user = User.query.all()
-    app.logger.debug("Get all user")
-    return users_schema.dump(all_user)
-    # return Response(all_user, mimetype="application/json", status=200)
-
+    
  
-
-
-
-
-
-
-
+    
+ 
 
 
 
@@ -211,7 +241,7 @@ def add_blog():
             blg = Blog(**data)
             db.session.add(blg)
             db.session.commit()
-            app.logger.debug("Blog added successfully")
+            app.logger.info("Blog added successfully")
             return json.dumps({"SUCCESS" : f"Record ({blg.id}) Added Successfully...! 200"})
 
         return json.dumps({"ERROR": "Required fields not present"})
@@ -221,6 +251,7 @@ def add_blog():
 
 
 @blog_blueprint.route('/blog/<int:id>',methods=['GET'])
+@cache.cached(timeout=30)
 def get_blog(id):
     """ GET BLOG POST USING ID"""
     
@@ -232,7 +263,7 @@ def get_blog(id):
                       "BLOD_C_DATE": blog.created_at,
                       "BLOG_M_DATE": blog.modified_at,
                       "BLOG_user_id": blog.userid,}
-        app.logger.debug("Get blog with particular id")
+        app.logger.info("Get blog with particular id")
         return json.dumps(json_dict,indent=4, sort_keys=True, default=str)
         
         # return blog_schema.dump(blog)
@@ -243,6 +274,7 @@ def get_blog(id):
 
 
 @blog_blueprint.route('/get_blog/', methods = ['GET'])
+@cache.cached(timeout=30)
 def get_post():
     """Get List of blog
    
@@ -251,7 +283,7 @@ def get_post():
     
     all_blog = Blog.query.all()
    
-    app.logger.debug("Get all Blog post")
+    app.logger.info("Get all Blog post")
     return blogs_schema.dump(all_blog)
     
     
@@ -272,7 +304,7 @@ def update_blog(id):
                 blog.modified_at = data.get('modified_at')
                 blog.userid = data.get('userid')
                 db.session.commit()
-                app.logger.debug("Blog updated successfully")
+                app.logger.info("Blog updated successfully")
                 return json.dumps({"SUCCESS" : f"Record ({blog.id}) Updated Successfully...!  200"})
         return json.dumps({"ERROR": "Required fields not present"})
     return json.dumps({"ERROR": "Blog with given id not present so cannot update.."})
@@ -280,6 +312,7 @@ def update_blog(id):
 
 @blog_blueprint.route('/blog/search', methods = ['POST'])
 @jwt_required()
+@cache.cached(timeout=30)
 def search_blog():
     current_user = get_jwt_identity()
     access_token = create_access_token(identity=current_user)
@@ -310,7 +343,7 @@ def delete_blog(id):
     if blg:
         db.session.delete(blg)
         db.session.commit()
-        app.logger.debug("Blog deleted successfully")
+        app.logger.info("Blog deleted successfully")
         return json.dumps({"SUCCESS": f"Record ({id}) Removed Successfully...! 200"})
     return json.dumps({"ERROR": "blog with given id not present so cannot Delete.."})
 
@@ -320,27 +353,22 @@ def delete_blog(id):
 
 
 
-@comment_blueprint.route('/post_comment', methods = ['POST'])
+@comment_blueprint.route('/post_comment/', methods = ['POST'])
 @jwt_required()
 def add_comment():
-    """Post List of comment 
-   
-                
-    """
-    
+    """Post List of comment """
     current_user = get_jwt_identity()
     access_token = create_access_token(identity = current_user)
     data = request.get_json()  # will retrive that json
     if data:
-        if data.get('id') and data.get('comment') and data.get('blogid'):
-            id = data.get('id')
-            comment = Comment.query.filter_by(id=id).first()
+        if data["id"]:
+            comment = Comment.query.filter_by(id=data["id"]).first()
             if comment:
                 return json.dumps({"ERROR" : "Duplicate comment-->401"})
-            cmnt = Comment(**data)
+            cmnt = Comment(id=data["id"],comment=data["comment"],blogid=data["blogid"])
             db.session.add(cmnt)
             db.session.commit()
-            app.logger.debug("Comment added successfully")
+            app.logger.info("Comment added successfully")
             return json.dumps({"SUCCESS" : f"Record ({cmnt.id}) Added Successfully...!  200"})
             # return CommentListResponseSchema().dump({'comment_list': cmnt})
 
@@ -352,6 +380,7 @@ def add_comment():
 
 
 @comment_blueprint.route('/comment/<int:id>',methods=['GET'])
+@cache.cached(timeout=30)
 def get_comment(id):
     """Comment detail view.
    
@@ -364,7 +393,7 @@ def get_comment(id):
                       "comment_BLOGID": comment.blogid,
                       }
         # return json.dumps(json_dict,indent=4, sort_keys=True, default=str)
-        app.logger.debug("Get comment with particular id.")
+        app.logger.info("Get comment with particular id.")
         return comment_schema.dump(comment)
         # return CommentListResponseSchema().dump({'comment_list': json_dict})
     else:
@@ -376,13 +405,14 @@ def get_comment(id):
     
 
 @comment_blueprint.route('/get_comment/',methods=['GET'])
+@cache.cached(timeout=30)
 def get_comment_ALL():
     """Get List of comment
   
     """
     all_comment = Comment.query.all()
     
-    app.logger.debug("Get all comments ")
+    app.logger.info("Get all comments ")
     return comments_schema.dump(all_comment) 
     # return CommentListResponseSchema().dump({'comment_list': all_comment})
 
@@ -403,7 +433,7 @@ def update_comment(id):
                 comment.blogid = data.get('blogid')
                 
                 db.session.commit()
-                app.logger.debug("Comment updated successfully")
+                app.logger.info("Comment updated successfully")
                 return json.dumps({"SUCCESS" : f"Record ({comment.id}) Updated Successfully...!  200"})
         return json.dumps({"ERROR": "Required fields not present"})
     return json.dumps({"ERROR": "comment with given id not present so cannot update.."})
@@ -411,6 +441,7 @@ def update_comment(id):
 
 @comment_blueprint.route('/comment/search/', methods=['POST'])
 @jwt_required()
+@cache.cached(timeout=30)
 def search_comment():
     current_user = get_jwt_identity()
     access_token = create_access_token(identity=current_user)
@@ -435,7 +466,7 @@ def delete_comment(id):
     if comment:
         db.session.delete(comment)
         db.session.commit()
-        app.logger.debug("Comment deleted successfully")
+        app.logger.info("Comment deleted successfully")
         return json.dumps({"SUCCESS": f"Record ({id}) Removed Successfully...! 200"})
     return json.dumps({"ERROR": "comment with given id not present so cannot Delete.."})
 
