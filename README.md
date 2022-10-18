@@ -1,25 +1,30 @@
-# RestApiBlog
-Project Title:
- Flask Rest APi for Blogging
+Rest API BLog:
 
-Project DEscription: 
-1.Creating Api endpoints for Blogging
+Blog API is created with help of Flask framework.
+It has models like Comment,Blog and User.
 
-Table of contents:
- 
-There are three models:
+Deployment:
 
-1.Blog
-2.Comment
-3.User
+To project run:
+		flask --app view --debug run
   
-How to install:
+Author
+@NamrataMoundekar
 
-There have requirements.txt file for installing all packages for application run.
+Run Locally
+Clone the project:
 
-cmd: pip install -r requirements.txt
+  git clone https://github.com/namrata-moundekar/RestApiBlog.git
+	
+Go to the project directory
 
-How to Run:
+  cd my-project
+	
+Install dependencies
 
-flask --app view run
+  pip install requirements.txt
+	
+Start the server
+
+    flask --app view run
  
