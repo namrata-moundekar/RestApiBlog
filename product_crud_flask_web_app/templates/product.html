@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h3>Product Information..! </h3>
+
+
+	{{resp}}
+	<br><br>
+	<form action="/product/save/" method="post">
+
+		Product Id :  <input type="text" name="pid" value="{{product.id}}"/> <br><br>
+		Product Name : <input type="text" name="pname" value="{{product.name}}"/> <br><br>
+		Product Qty :	<input type="text" name="pqty" value="{{product.qty}}"/> <br><br>
+		Product Price : <input type="text" name="pprice" value="{{product.price}}"/> <br><br>
+		Product Category : <input type="text" name="pcat" value="{{product.category}}"/> <br><br>
+		Product Vendor : <input type="text" name="pven" value="{{product.vendor}}"/> <br><br>
+
+		<input type="submit" >
+
+	</form>
+
+
+	<table border="1">
+			<thead>
+				<th>Product ID </th>	<th>Product Name</th> <th>Product Price</th>
+				<th>Product Qty</a></th>
+				<th>
+					Product Category
+				</th><th>Product Vendor</th><th>Actions</th>
+			</thead>
+
+			<tbody>
+					{% for prod in products %}
+						<tr>
+							<td>{{prod.id}}</td>
+							<td>{{prod.name}}</td>
+							<td>{{prod.price}}</td>
+							<td>{{prod.qty}}</td>
+							<td>{{prod.category}}</td>
+							<td>{{prod.vendor}}</td>
+							<td>
+								<a href="/edit/{{prod.id}}">EDIT</a>&nbsp;&nbsp;
+								<a href="/delete/{{prod.id}}">DELETE</a>
+							</td>
+						</tr>
+					{% endfor %}
+			</tbody>
+
+	</table>
+
+</body>
+</html>
