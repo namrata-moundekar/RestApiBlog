@@ -44,7 +44,7 @@ logging.basicConfig(filename='record.log', level=logging.INFO, format='%(asctime
 
 
 app = Flask(__name__, template_folder='./swagger/templates')
-app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://root:root@db/flaskwebapp'
+app.config['SQLALCHEMY_DATABASE_URI'] ='mysql+pymysql://root:root@localhost/flaskwebapp'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
  # configure the redis
